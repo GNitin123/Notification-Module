@@ -1,0 +1,14 @@
+.layout-notification {
+  font-style: normal;
+  font-weight: normal;
+  font-family: $work-sans;
+  &__header {
+    font-family: $spectral;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: $white !important;
+  }
+  &__content {
+    height: calc(100vh - 64px);
+  }
+}
