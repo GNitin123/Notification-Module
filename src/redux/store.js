@@ -5,4 +5,8 @@ export const store = configureStore({
   reducer: {
     notification: notificationReducer,
   },
+  middleware: getDefaultMiddleware =>
+    getDefaultMiddleware({
+      serializableCheck: false,
+    }),
 })

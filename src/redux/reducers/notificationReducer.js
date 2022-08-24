@@ -13,40 +13,40 @@ const initialState = {
       text: 'Your data have been saved',
       variant: 'success',
       icon: CheckCircleOutlined,
-      timeout: 2000,
-      isDisabled: false,
+      timeout: 5000,
+      isHidden: false,
     },
     {
       key: 2,
       text: 'Oops! Something went wrong..',
       variant: 'error',
       icon: CloseCircleOutlined,
-      timeout: 2000,
-      isDisabled: false,
+      timeout: 7000,
+      isHidden: false,
     },
     {
       key: 3,
       text: 'Your password will expire in 2 days!',
       variant: 'warning',
       icon: ExclamationCircleOutlined,
-      timeout: 2000,
-      isDisabled: false,
+      timeout: 9000,
+      isHidden: false,
     },
     {
       key: 4,
-      text: 'you have a one new message!',
+      text: 'You have a one new message!',
       variant: 'info',
       icon: InfoCircleOutlined,
-      timeout: 2000,
-      isDisabled: false,
+      timeout: 11000,
+      isHidden: false,
     },
     {
       key: 5,
       text: 'This is default status..',
       variant: 'default',
       icon: '',
-      timeout: 2000,
-      isDisabled: false,
+      timeout: 13000,
+      isHidden: false,
     },
   ],
 }
@@ -54,9 +54,21 @@ const initialState = {
 export const counterSlice = createSlice({
   name: 'notification',
   initialState,
-  reducers: {},
+  reducers: {
+    hideNotificationAlert: (state, action) => {
+      state.notificationList = state.notificationList.map(notification => {
+        if (notification.variant === action.payload) {
+          return {
+            ...notification,
+            isHidden: !notification.isHidden,
+          }
+        }
+        return notification
+      })
+    },
+  },
 })
 
-export const {} = counterSlice.actions
+export const { hideNotificationAlert } = counterSlice.actions
 
 export default counterSlice.reducer
