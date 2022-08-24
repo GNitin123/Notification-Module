@@ -11,13 +11,15 @@ const NotificationAlert = ({
   onTimer = () => {},
 }) => {
   useEffect(() => {
-    const timer = setTimeout(() => {
-      onTimer()
-    }, timeout)
+    const timer =
+      !isHidden &&
+      setTimeout(() => {
+        onTimer()
+      }, timeout)
     return () => {
       timer && clearTimeout(timer)
     }
-  }, [])
+  }, [isHidden])
 
   return (
     <div className={`component-notification-alert ${variant} ${isHidden ? 'hide-alert' : 'open'}`}>
