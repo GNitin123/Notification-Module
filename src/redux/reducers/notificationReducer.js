@@ -21,7 +21,7 @@ const initialState = {
       text: 'Oops! Something went wrong..',
       variant: 'error',
       icon: CloseCircleOutlined,
-      timeout: 7000,
+      timeout: 6500,
       isHidden: false,
     },
     {
@@ -29,7 +29,7 @@ const initialState = {
       text: 'Your password will expire in 2 days!',
       variant: 'warning',
       icon: ExclamationCircleOutlined,
-      timeout: 9000,
+      timeout: 7500,
       isHidden: false,
     },
     {
@@ -37,7 +37,7 @@ const initialState = {
       text: 'You have a one new message!',
       variant: 'info',
       icon: InfoCircleOutlined,
-      timeout: 11000,
+      timeout: 8500,
       isHidden: false,
     },
     {
@@ -45,7 +45,7 @@ const initialState = {
       text: 'This is default status..',
       variant: 'default',
       icon: '',
-      timeout: 13000,
+      timeout: 9500,
       isHidden: false,
     },
   ],
