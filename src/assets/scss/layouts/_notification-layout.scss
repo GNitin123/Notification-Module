@@ -7,11 +7,13 @@
     font-size: 1.5rem;
     font-weight: 600;
     color: $white !important;
+    height: 64px !important;
     @media screen and (max-width: 420px) {
       text-align: center;
     }
   }
   &__content {
+    overflow: hidden;
     height: calc(100vh - 64px);
   }
 }
