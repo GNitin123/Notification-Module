@@ -1,0 +1,90 @@
+.component-notification-alert {
+  font-style: normal;
+  font-weight: normal;
+  font-family: $work-sans;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 34rem;
+  width: 85%;
+  margin: 2rem 0;
+  height: 3.125rem;
+  border-radius: 0.313rem;
+  padding: 0 1rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  &__close-icon {
+    font-weight: bolder;
+    font-size: 16px;
+    color: $black;
+    cursor: pointer;
+  }
+  &__icon-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__icon {
+    color: $black;
+    font-size: 20px;
+    margin-right: 1.5rem;
+  }
+  &__text {
+    text-transform: capitalize;
+    color: $black;
+    font-size: 16px;
+  }
+  @media screen and (max-width: 1078px) {
+    width: 100%;
+  }
+  @media screen and (max-width: 1078px) {
+    min-width: 10rem;
+  }
+}
+
+.success {
+  background-color: $green--five;
+}
+
+.error {
+  background-color: $red--four;
+}
+
+.warning {
+  background-color: $yellow--one;
+}
+
+.info {
+  background-color: $blue--three;
+}
+
+.default {
+  background-color: $white;
+}
+
+.hide-alert {
+  pointer-events: none;
+  inset: 0;
+  animation: fade-out 500ms forwards;
+}
+
+.open {
+  animation: slide 400ms forwards;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
