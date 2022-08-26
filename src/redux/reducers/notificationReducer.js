@@ -51,7 +51,7 @@ const initialState = {
   ],
 }
 
-export const counterSlice = createSlice({
+export const notificationSlice = createSlice({
   name: 'notification',
   initialState,
   reducers: {
@@ -69,6 +69,6 @@ export const counterSlice = createSlice({
   },
 })
 
-export const { hideNotificationAlert } = counterSlice.actions
+export const { hideNotificationAlert } = notificationSlice.actions
 
-export default counterSlice.reducer
+export default notificationSlice.reducer
